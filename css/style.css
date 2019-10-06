@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+figure.overlay {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  float: left;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 310px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* make a smooth transition when hover over image */
+figure.overlay * {
+  -webkit-transition: all 0.35 ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+figure.overlay img {
+  opacity: 0.3;
+  max-width: 100%;
+  position: relative;
+}
+
+figure.overlay figcaption {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  right: 30px;
+  /* rotates text */
+  -webkit-transform: rotate(0deg) translateY(-50%) scale(1);
+  transform: rotate(0deg) translateY(-50%) scale(1);
+  -webkit-transform-origin: center;
+}
