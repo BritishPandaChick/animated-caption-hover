@@ -33,5 +33,82 @@ figure.overlay figcaption {
   /* rotates text */
   -webkit-transform: rotate(0deg) translateY(-50%) scale(1);
   transform: rotate(0deg) translateY(-50%) scale(1);
-  -webkit-transform-origin: center;
+  -webkit-transform-origin: center 0;
+  transform-origin: center 0;
 }
+
+figure.overlay figcaption h2 {
+  top: 50%;
+  letter-spacing: -1px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  margin: 0;
+  font-weight: 400;
+}
+
+figure.overlay figcaption h2 span {
+  font-weight: 800;
+}
+
+/* above and below figcaptions */
+figure.overlay figcaption:before, figure.overlay figcaption:after {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  content: "";
+  display: block;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+figure.overlay figcaption:before {
+  left: 0;
+  top: 0;
+}
+
+figure.overlay figcaption:after {
+  bottom: 0;
+  right: 0;
+}
+
+figure.overlay.pink {
+  background: #ff9999;
+}
+
+figure.overlay.purple {
+  background: #e2ccff;
+}
+
+figure.overlay.green {
+  background: #dfff80;
+}
+
+/* Only necessary for image links */
+figure .overlay a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+/* When hover, overlay disappears */
+figure.overlay:hover img, figure.overlay.hover img {
+  opacity: 1;
+}
+
+figure.overlay:hover figcaption, figure.overlay.hover figcaption {
+  -webkit-transform: rotate(-45deg) translateY(-50%) scale(0.9);
+  transform: rotate(-45deg) translateY(-50%) scale(0.9);
+}
+
+figure.overlay:hover figcaption:before,
+figure.overlay.hover figcaption:before,
+figure.overlay:hover figcaption: after,
+figure.overlay.hover figcaption:after {
+  width: 200%;
+}
+
+/* use both :hover pseudo-selector and class .hover */
